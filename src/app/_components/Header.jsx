@@ -4,14 +4,13 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useUser, UserButton } from "@clerk/nextjs";
-import { Link } from "lucide-react";
+import Link from "next/link";
 
 function Header() {
   const { user, isSignedIn } = useUser();
   return (
     <div className="p-5 flex justify-between items-center border shadow-sm">
       <div className="flex flex-row items-center">
-        {/* Insert LOGO*/}
         <Image
           src={"/FinalLogo.webp"}
           alt="Logo"
@@ -26,14 +25,14 @@ function Header() {
         <UserButton />
       ) : (
         <div className="flex gap-3 items-center">
-          {/* <Link href='/'> */}
-          <Button variant="outline" className="rounded-full font-bold">
-            Dashboard
-          </Button>
-          {/* </Link>
-            <Link href='/'> */}
-          <Button className="rounded-full font-bold">Get started</Button>
-          {/* </Link> */}
+          <Link href="/dashboard">
+            <Button variant="outline" className="rounded-full font-bold">
+              Dashboard
+            </Button>
+          </Link>
+          <Link href="/sign-in">
+            <Button className="rounded-full font-bold">Get started</Button>
+          </Link>
         </div>
       )}
     </div>
