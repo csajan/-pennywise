@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+PennyWise is a quick weekend project (pushed for functionality to be completed in the weekend), inspired by the famous clown Pennywise. It is a quick, easy to use finance tracker to help to budget wisely.
+
+## Tech stack
+
+    - next.js
+    - tailwind CSS
+
+
+    - clerk auth
+    - shadcn/ui
+    - drizzle
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm i
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Set Up Environment Variables**
 
-## Learn More
+Create a new file named `.env.local` in the root of your project and add the following content:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+NEXT_PUBLIC_DATABASE_URL=
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL=/dashboard
 
-## Deploy on Vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Connect database by following [link](https://console.neon.tech/realms/prod-realm/protocol/openid-connect/registrations?client_id=neon-console&redirect_uri=https%3A%2F%2Fconsole.neon.tech%2Fauth%2Fkeycloak%2Fcallback&response_type=code&scope=openid+profile+email&state=e_DibcDODLzM2SsJZ_UfFQ%3D%3D%2C%2C%2C)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Connect Clerk by following [docs](https://clerk.com/docs/quickstarts/nextjs)
+
+**Running the Project**
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
+
+**Note**
+This app was built as a quick weekend project with Halloween in mind, so expect some bugs and incomplete features. There's plenty of room for improvement, including fixing existing bugs, implementing new features like income tax calculations, and improving the user experience. Unit tests and end-to-end tests are yet to be written
