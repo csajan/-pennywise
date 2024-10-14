@@ -50,5 +50,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-**Note**
+**Note:**
+
 This app was built as a quick weekend project with Halloween in mind, so expect some bugs and incomplete features. There's plenty of room for improvement, including fixing existing bugs, implementing new features like income tax calculations, and improving the user experience. Unit tests and end-to-end tests are yet to be written
