@@ -7,7 +7,7 @@ export default function Page() {
         <section className="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6">
           <img
             alt=""
-            src="https://images.fineartamerica.com/images/artworkimages/medium/1/crazy-clown-excited-to-hold-a-bag-of-money-ryan-jorgensen.jpg"
+            src="https://c1.wallpaperflare.com/preview/541/550/367/balloon-party-carnival-move.jpg"
             className="absolute inset-0 h-full w-full object-cover opacity-80"
           />
         </section>
@@ -36,11 +36,6 @@ export default function Page() {
               <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
                 Welcome to PennyWise 🤑
               </h1>
-
-              <p className="mt-4 leading-relaxed text-gray-500">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.
-              </p>
             </div>
 
             <SignIn />
